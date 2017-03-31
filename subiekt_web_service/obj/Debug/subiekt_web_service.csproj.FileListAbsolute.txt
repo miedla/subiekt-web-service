@@ -1,0 +1,7 @@
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\bin\subiekt_web_service.dll.config
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\bin\subiekt_web_service.dll
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\bin\subiekt_web_service.pdb
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\bin\MySql.Data.dll
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.csproj.ResolveComReference.cache
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.dll
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.pdb

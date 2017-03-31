@@ -1,0 +1,6 @@
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\klient\bin\Debug\klient.exe.config
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\klient\bin\Debug\klient.exe
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\klient\bin\Debug\klient.pdb
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\klient\obj\Debug\klient.csprojResolveAssemblyReference.cache
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\klient\obj\Debug\klient.exe
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\klient\obj\Debug\klient.pdb

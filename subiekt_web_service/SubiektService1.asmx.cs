@@ -62,10 +62,9 @@ namespace subiekt_web_service
                 gt.Operator = ConfigConnection.OperatorGt; //"Szef";
                 gt.OperatorHaslo = ConfigConnection.OperatorGThaslo; //"";
                                                                      //InsERT.Subiekt sgt = GetSubiekt();
-
                 sgt =
                 (InsERT.Subiekt)
-                gt.Uruchom((int)InsERT.UruchomDopasujEnum.gtaUruchomDopasujUzytkownika, (int)InsERT.UruchomEnum.gtaUruchom);
+                gt.Uruchom((int)InsERT.UruchomDopasujEnum.gtaUruchomDopasuj, (int)InsERT.UruchomEnum.gtaUruchom);
 
                 if (sgt == null)
                 {

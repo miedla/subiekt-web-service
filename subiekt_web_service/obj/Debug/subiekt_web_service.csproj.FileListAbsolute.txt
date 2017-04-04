@@ -5,3 +5,4 @@ C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subi
 C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.csproj.ResolveComReference.cache
 C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.dll
 C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.pdb
+C:\Users\ampmedia\documents\visual studio 2017\Projects\subiekt_web_service\subiekt_web_service\obj\Debug\subiekt_web_service.csprojResolveAssemblyReference.cache

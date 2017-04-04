@@ -41,51 +41,21 @@ namespace subiekt_web_service
         {
             if (AuthorizeUser(UserAuthValue) == true)
             {
-                //try
-                //{
-                InsERT.GT gt = new InsERT.GT();
-                InsERT.Subiekt sgt;
-                gt.Produkt = InsERT.ProduktEnum.gtaProduktSubiekt;
+                //ExecuteCommand(@"psexec -i 0 psexec -s -i 1 C:\windows\system32\Notepad.exe");
+                //ExecuteCommand(@"C:\hello.bat");
 
-                gt.Serwer = ConfigConnection.ServerGt; //"(local)\\INSERTGT";
-                gt.Baza = ConfigConnection.BazaGt; //"test3";
-                if (ConfigConnection.Uzytkownik != "")
-                {
-                    gt.Autentykacja = InsERT.AutentykacjaEnum.gtaAutentykacjaMieszana; //gtaAutentykacjaMieszana;
-                    gt.Uzytkownik = ConfigConnection.Uzytkownik;
-                    gt.UzytkownikHaslo = ConfigConnection.UzytkownikHaslo;
-                }
-                else
-                {
-                    gt.Autentykacja = InsERT.AutentykacjaEnum.gtaAutentykacjaWindows; //gtaAutentykacjaMieszana;
-                }
-                gt.Operator = ConfigConnection.OperatorGt; //"Szef";
-                gt.OperatorHaslo = ConfigConnection.OperatorGThaslo; //"";
-                                                                     //InsERT.Subiekt sgt = GetSubiekt();
-                sgt =
-                (InsERT.Subiekt)
-                gt.Uruchom((int)InsERT.UruchomDopasujEnum.gtaUruchomDopasuj, (int)InsERT.UruchomEnum.gtaUruchom);
 
-                if (sgt == null)
-                {
-                    return "sgt ==null";
-                }
-                //}
-                //catch(Exception e)
-                //{
-                //    return "expception: " + e.ToString();
-                //}
-                //bool czyDodalo = Utils.PostUserById(sgt, order_id);
-                bool czyDodalo = true;
-                if (czyDodalo)
-                {
-                    return "threading: " + System.Threading.Thread.CurrentThread.GetApartmentState().ToString();
-                    //return "user was successfully added to subiekt";
-                }
-                else
-                {
-                    return "user already exists in subiekt or error occured";
-                }
+                //// the name of the application to launch
+                //String applicationName = "notepad.exe";
+
+                //// launch the application
+                //ApplicationLoader.PROCESS_INFORMATION procInfo;
+                //ApplicationLoader.StartProcessAndBypassUAC(applicationName, "c:/",out procInfo);
+
+                //ExecuteCommand(@"net start subiekt_srv");
+                ExecuteCommand(@"c:/PSTools/PsExec.exe \\127.0.0.1 -s -d -i 1 C:\Users\ampmedia\Documents\subiekt_app\bin\Debug\subiekt_sfera_test.exe " + order_id);
+
+                return "ok";
             }
             else
             {
@@ -141,6 +111,37 @@ namespace subiekt_web_service
                 gt.Uruchom((int)InsERT.UruchomDopasujEnum.gtaUruchomDopasujUzytkownika, (int)InsERT.UruchomEnum.gtaUruchom);
 
             return sgt;
+        }
+
+        static void ExecuteCommand(string command)
+        {
+            int exitCode;
+            ProcessStartInfo processInfo;
+            Process process;
+
+            processInfo = new ProcessStartInfo("cmd.exe", "/c " + command);
+            processInfo.CreateNoWindow = true;
+            processInfo.UseShellExecute = false;
+            // *** Redirect the output ***
+            processInfo.RedirectStandardError = true;
+            processInfo.RedirectStandardOutput = true;
+
+            processInfo.Verb = "runas";
+            process = Process.Start(processInfo);
+
+            process.WaitForExit();
+
+            // *** Read the streams ***
+            // Warning: This approach can lead to deadlocks, see Edit #2
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            exitCode = process.ExitCode;
+
+            Console.WriteLine("output>>" + (String.IsNullOrEmpty(output) ? "(none)" : output));
+            Console.WriteLine("error>>" + (String.IsNullOrEmpty(error) ? "(none)" : error));
+            Console.WriteLine("ExitCode: " + exitCode.ToString(), "ExecuteCommand");
+            process.Close();
         }
     }
 

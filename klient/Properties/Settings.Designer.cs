@@ -26,7 +26,7 @@ namespace klient.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:53688/SubiektService1.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:100/SubiektService1.asmx")]
         public string klient_localhost_SubiektService1 {
             get {
                 return ((string)(this["klient_localhost_SubiektService1"]));
